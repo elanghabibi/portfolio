@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Elang Alamsyah Habibi</title>
+    <link rel="stylesheet" href="./src/css/output.css" />
     <link
       rel="shortcut icon"
-      href="src/images/icon/favicon.ico"
+      href="./src/images/icon/favicon.ico"
       type="image/x-icon"
+    />
+    <link
+      href="https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"
     />
     <meta
       name="description"
@@ -19,595 +28,501 @@
       content="Portfolio Elang Alamsyah Habibi, Web Front End Developer, Elang Alamsyah Habibi, Elang Habibi, Elang A. Habibi, Elang, Portfolio, SMKN 1 Pemalang"
     />
     <meta name="author" content="Elang Alamsyah Habibi" />
-    <link rel="stylesheet" href="src/css/style.css" />
-    <link
-      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css"
-      rel="stylesheet"
-    />
   </head>
-  <body class="bg-gray-950 text-gray-50 h-300">
-    <section class="p-2 w-full h-75 relative">
+  <body class="bg-gray-50 dark:bg-gray-950 font-montserrat">
+    <header
+      class="fixed top-0 left-0 bg-gray-50/50 dark:bg-gray-950/50 dark:text-gray-50 backdrop-blur-xl flex w-full h-16"
+      style="z-index: 100"
+    >
       <div
-        class="w-full h-50 rounded-lg"
-        style="
-          background: url(src/images/banner.jpg);
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-        "
-      ></div>
-      <div
-        class="absolute top-0 left-0 md:mt-25 md:ml-20 max-md:top-25 max-md:left-1/2 max-md:-translate-x-1/2 w-50 aspect-square rounded-full border-4 border-gray-950"
-        style="
-          background: url(src/images/elang-pic.png);
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-        "
-      ></div>
-    </section>
-
-    <section class="px-25 py-4 max-md:px-4 max-md:py-4 w-full h-fit">
-      <div class="space-y-4">
-        <div class="pb-4 border-b border-gray-800 space-y-1">
-          <h1 class="text-3xl font-bold text-gray-200">
-            Elang Alamsyah Habibi
-          </h1>
-          <h2 class="text-lg text-gray-400">@elanghabibi</h2>
+        class="flex items-center justify-between w-full px-8 py-2 border-b border-gray-100 dark:border-gray-900"
+      >
+        <div class="flex items-center gap-16">
+          <a href="#" class="text-lg"><h1>Elang A. Habibi</h1></a>
+          <nav class="text-sm max-lg:hidden">
+            <ul class="flex gap-8">
+              <li><a href="#aboutMe" class="nav-link">About Me</a></li>
+              <li><a href="#skills" class="nav-link">Skills</a></li>
+              <li><a href="#tools" class="nav-link">Tools</a></li>
+              <li><a href="#experience" class="nav-link">Experience</a></li>
+              <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="pb-4 border-b border-gray-800 space-y-1">
-          <h2 class="text-xl font-bold text-gray-200">About Me</h2>
-          <p class="text-sm text-gray-400">
-            I'm a Creative Tech Enthusiast with a passion for web development,
-            design, and photography. I enjoy combining technical skills with
-            creativity to build engaging digital experiences. Currently, I’m
-            exploring more in programming and visual art to keep growing and
-            improving.
-          </p>
-        </div>
-        <div class="w-full flex justify-between items-center">
-          <div class="flex gap-2 text-2xl text-gray-400">
-            <a href="https://www.instagram.com/elanghabibi" target="_blank"
-              ><i class="bxl bx-instagram"></i
-            ></a>
-            <a href="https://github.com/elanghabibi" target="_blank"
-              ><i class="bxl bx-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/elangalamsyahhabibi"
-              target="_blank"
-              ><i class="bxl bx-linkedin"></i
-            ></a>
-          </div>
-          <div class="flex items-center justify-center text-lg text-gray-400">
-            <i class="bx bxs-location"></i>
-            <p class="text-sm">Pemalang, Indonesia</p>
+        <div class="flex items-center gap-4">
+          <a href="https://wa.me/6287739227859?text=Hi%20Elang!%2C%20I%20just%20visited%20your%20portfolio%20and%20Iam%20interested%20in%20learning%20more%20about%20your%20work!" target="_blank" class="flex w-fit items-center max-lg:hidden"
+            ><p class="text-sm underline">Get in touch</p>
+            <i class="bx bx-arrow-up-right-stroke text-xl"></i>
+          </a>
+          <button
+            class="h-8 w-8 max-md:w-6 max-md:h-6 bg-neutral-200 dark:bg-neutral-600 rounded-full p-1 flex items-center justify-center relative cursor-pointer"
+            id="toggleTheme"
+          >
+            <span
+              class="flex items-center justify-center w-6 max-md:w-5 aspect-square bg-neutral-50 dark:bg-neutral-950 rounded-full"
+              id="toggleCircle"
+            ></span>
+          </button>
+          <div
+            class="hidden max-lg:flex text-xl cursor-pointer"
+            onclick="toggleMenu()"
+          >
+            <i class="bx bx-menu"></i>
           </div>
         </div>
       </div>
-      <nav class="w-full h-10 mt-8 text-gray-400">
-        <ul
-          class="flex gap-x-7 max-md:gap-x-1 w-full h-full justify-evenly items-center text-xl"
-        >
-          <li
-            class="main-nav main-nav-about active"
-            onclick="mainPage('about')"
-          >
-            <i class="bx bx-user"></i>
-          </li>
-          <li class="main-nav main-nav-project" onclick="mainPage('project')">
-            <i class="bx bx-folder"></i>
-          </li>
-          <li
-            class="main-nav main-nav-experience"
-            onclick="mainPage('experience')"
-          >
-            <i class="bx bx-briefcase"></i>
-          </li>
-          <li class="main-nav main-nav-contact" onclick="mainPage('contact')">
-            <i class="bx bx-envelope"></i>
-          </li>
-        </ul>
-      </nav>
-    </section>
+    </header>
 
-    <section class="w-full h-fit px-25 max-md:px-6">
-      <div class="relative w-full h-full mt-8">
-        <!-- Page About -->
-        <div id="about" class="main-content active">
-          <div class="w-full flex justify-center items-center">
-            <h2 class="text-4xl font-bold">
-              About <span class="text-sky-600">Me</span>
+    <!-- Nav Mobile -->
+    <nav id="navMobile">
+      <ul class="flex flex-col items-center gap-4 text-lg py-4">
+        <li><a href="#aboutMe" class="nav-link">About Me</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#tools" class="nav-link">Tools</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="w-full flex flex-col gap-8">
+      <!-- Hero Section -->
+      <section
+        class="w-full h-screen max-lg:h-fit px-8 max-lg:px-4 pt-16 flex max-lg:flex-col"
+      >
+        <div
+          class="flex flex-col justify-between h-full py-8 max-lg:py-4 w-75/100 max-lg:w-full max-lg:gap-8"
+        >
+          <div class="flex gap-8 items-center w-fit">
+            <div>
+              <h3
+                id="myAge"
+                class="flex items-start relative text-4xl dark:text-gray-400 text-gray-600"
+              >
+                0
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">Years Old</p>
+            </div>
+            <div>
+              <h3
+                class="flex items-start relative text-4xl dark:text-gray-400 text-gray-600"
+              >
+                404
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Brain Not Found
+              </p>
+            </div>
+            <div>
+              <h3
+                class="flex items-start relative text-4xl dark:text-gray-400 text-gray-600"
+              >
+                200
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                &quot;Finally works!&quot; momen
+              </p>
+            </div>
+          </div>
+
+          <div class="w-fit flex flex-col gap-2">
+            <h3 class="text-xl text-gray-600 dark:text-gray-400">
+              Good <span id="ketWaktu"></span>.
+            </h3>
+            <h2
+              class="text-9xl tracking-tighter font-light max-lg:text-8xl text-gray-950 dark:text-gray-50"
+            >
+              <span>Hello</span>
+              <span class="inline max-lg:block">World!</span>
             </h2>
+            <div
+              class="w-fit relative before:content-[''] before:w-6 before:h-0.5 before:bg-gray-600 dark:before:bg-gray-400 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2"
+            >
+              <p class="ml-8 text-sm text-gray-600 dark:text-gray-400 w-full">
+                It's Elang A. Habibi a Creative Tech Enthusiast
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-1 items-center w-fit max-lg:hidden text-gray-950 dark:text-gray-50"
+          >
+            <p class="text-sm">Scroll down</p>
+            <i class="bx bx-arrow-down-stroke text-xl"></i>
+          </div>
+        </div>
+
+        <div
+          class="w-25/100 p-8 flex flex-col justify-between max-lg:w-full max-lg:p-4 max-lg:gap-4"
+        >
+          <div class="w-full contrast-125">
+            <div class="w-full aspect-[3/4] overflow-hidden image-hover">
+              <img
+                class="w-full h-full object-cover"
+                src="./src/images/elang-profile.png"
+                alt="Photo Elang Alamsyah Habibi"
+              />
+            </div>
           </div>
           <div
-            class="mt-8 w-full h-fit flex max-lg:flex-col justify-evenly gap-10 max-md:gap-2"
+            class="w-full text-right text-sm text-gray-600 dark:text-gray-400 max-lg:text-left"
           >
-            <div class="w-40/100 max-lg:w-full">
-              <div
-                class="w-full h-fit bg-gradient-to-br from-gray-900 to-gray-900/50 border border-gray-800 rounded-xl overflow-hidden"
-              >
-                <div class="group relative w-full aspect-video">
-                  <div
-                    class="w-full aspect-video bg-gradient-to-b from-transparent to-black/70 absolute top-0 left-0 z-20 flex justify-start items-end p-4 font-bold text-xl"
-                  >
-                    <h3>Elang Alamsyah Habibi</h3>
-                  </div>
-                  <div
-                    class="w-full aspect-video overflow-hidden flex justify-center items-center"
-                  >
-                    <div
-                      class="w-full aspect-video group-hover:scale-110 transition-all duration-500 ease-in-out"
-                      style="
-                        background: url(src/images/elang-about.jpg);
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                      "
-                    ></div>
-                  </div>
-                </div>
-                <div class="p-8 max-md:p-4">
-                  <h3
-                    class="text-sky-600 font-bold text-lg border-l-4 px-3 border-sky-600"
-                  >
-                    Professional Profile
-                  </h3>
-                  <div class="text-sm text-gray-300 space-y-2 mt-2 indent-3">
-                    <p>
-                      I’m a Creative Tech Enthusiast with strong passion in
-                      technology and design. My journey started with a curiosity
-                      in web development, where I focused on building modern,
-                      responsive, and interactive interfaces using HTML, CSS,
-                      and JavaScript. Along the way, I also expanded into
-                      graphic design, pixel art, 3d modelling and photography,
-                      combining technical skills with creativity to craft
-                      meaningful digital experiences.
-                    </p>
-                    <p>
-                      I am currently a student at SMKN 1 Pemalang, majoring in
-                      <i>Pengembangan Perangkat Lunak dan Gim (PPLG)</i>. This
-                      academic path allows me to explore the world of
-                      programming, design, and maybe game creation, while also
-                      sharpening my problem-solving and creative thinking
-                      skills.
-                    </p>
-                    <p>
-                      Beyond coding, I express my creativity through Pixel Art,
-                      and 3D Modeling with Blender. I also enjoy experimenting
-                      with AI-generated art, blending imagination and technology
-                      to bring unique ideas to life.
-                    </p>
-                    <p>
-                      With this combination of technical expertise and artistic
-                      creativity, I aim to create works that are not only
-                      functional but also inspiring.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p>
+              <i
+                >&quot;Lorem ipsum dolor sit amet consectetur
+                adipisicing.&quot;</i
+              ><br />~ Elang A. Habibi
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- End Hero Section -->
 
-            <!-- Right -->
-            <div
-              class="w-55/100 space-y-8 max-lg:w-full max-lg:mt-4 max-lg:space-y-4"
-            >
-              <nav
-                class="w-full h-fit p-3 bg-gray-900 border border-gray-800 rounded-xl"
+      <!-- About Me -->
+      <section
+        id="aboutMe"
+        class="w-full h-fit p-8 max-lg:p-4 flex items-center"
+      >
+        <div
+          class="w-fit h-fit flex p-8 max-lg:p-4 border-2 border-gray-950 dark:border-gray-900 gap-8 max-lg:flex-col max-lg:w-full"
+        >
+          <div
+            class="w-35/100 h-fit aspect-[4/3] overflow-hidden relative max-lg:w-full image-hover"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="./src/images/elang-about.png"
+              alt=""
+            />
+            <p class="absolute bottom-4 left-4 text-green-400 font-semibold">
+              Elang Alamsyah Habibi
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4 max-lg:gap-2 w-5/10 max-lg:w-full">
+            <h3 class="text-3xl font-bold">
+              <span class="text-gray-950 dark:text-gray-50"> About </span>
+              <span
+                class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
+                >Me</span
               >
-                <ul
-                  class="w-full grid grid-cols-3 gap-2 text-center justify-evenly text-sm font-bold text-gray-300"
-                >
-                  <li
-                    class="about-nav about-nav-skills active"
-                    onclick="aboutPage('skills')"
-                  >
-                    Skills
+            </h3>
+            <p
+              class="w-full text-md text-gray-600 dark:text-gray-400 leading-relaxed"
+            >
+              I'm a Creative Tech Enthusiast with a passion for web development,
+              design, and photography. I enjoy combining technical skills with
+              creativity to build engaging digital experiences. Currently, I’m
+              exploring more in programming and visual art to keep growing and
+              improving.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- End About Me -->
+
+      <!-- Skills -->
+      <section
+        id="skills"
+        class="w-full h-fit p-8 flex items-center max-lg:p-4"
+      >
+        <div class="flex flex-col gap-4 w-full">
+          <h3 class="text-3xl font-bold">
+            <span class="text-gray-950 dark:text-gray-50">What</span>
+            <span
+              class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
+              >can i do?</span
+            >
+          </h3>
+          <div
+            class="w-full h-120 max-lg:h-fit gap-8 p-8 max-lg:p-4 max-lg:gap-4 grid grid-cols-3 max-lg:grid-cols-1"
+          >
+            <!-- SKills 1 -->
+            <div class="skills-card__container">
+              <div class="skills-card">
+                <h4 class="skills-card__title">Web Development</h4>
+                <ul class="skills-card__list">
+                  <li class="skill-box">
+                    <i class="bxl bx-html5 text-xl"></i>
+                    <p class="text-sm">HTML</p>
                   </li>
-                  <li
-                    class="about-nav about-nav-education"
-                    onclick="aboutPage('education')"
-                  >
-                    Education
+                  <li class="skill-box">
+                    <i class="bxl bx-css3 text-xl"></i>
+                    <p class="text-sm">CSS3</p>
                   </li>
-                  <li
-                    class="about-nav about-nav-certificate"
-                    onclick="aboutPage('certificate')"
-                  >
-                    Certificate
+                  <li class="skill-box">
+                    <i class="bxl bx-javascript text-xl"></i>
+                    <p class="text-sm">Javascript</p>
+                  </li>
+                  <li class="skill-box">
+                    <i class="bxl bx-tailwind-css text-xl"></i>
+                    <p class="text-sm">TailwindCSS</p>
+                  </li>
+                  <li class="skill-box">
+                    <i class="bxl bx-php text-xl"></i>
+                    <p class="text-sm">PHP</p>
+                  </li>
+                  <li class="skill-box">
+                    <i class="bxl bx-laravel text-xl"></i>
+                    <p class="text-sm">Laravel</p>
                   </li>
                 </ul>
-              </nav>
-
-              <div
-                class="relative w-full h-170 overflow-auto bg-gray-900 border border-gray-800 rounded-xl"
-              >
-                <div id="skills" class="about-content active">
-                  <!-- Web front End development -->
-                  <div class="space-y-4">
-                    <div class="flex gap-2 items-center">
-                      <i
-                        class="bx bx-code p-2 rounded-full bg-red-600/50 text-red-400"
-                      ></i>
-                      <h3 class="text-lg font-bold text-gray-200">
-                        Web Development
-                      </h3>
-                    </div>
-                    <div class="grid grid-cols-3 max-md:grid-cols-2 gap-4">
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-php text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">PHP</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-my-sql text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">MySQL</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-html5 text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">HTML5</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-css3 text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">CSS3</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-javascript text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">Javascript</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-tailwind-css text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">TailwindCSS</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- creative and visual skill -->
-                  <div class="space-y-4 mt-6">
-                    <div class="flex gap-2 items-center">
-                      <i
-                        class="bx bxs-light-bulb p-2 rounded-full bg-yellow-600/50 text-yellow-400"
-                      ></i>
-                      <h3 class="text-lg font-bold text-gray-200">
-                        Creative & Visual Skill
-                      </h3>
-                    </div>
-                    <div class="grid grid-cols-3 max-md:grid-cols-2 gap-4">
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bx bxs-cube-inside text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">3D Modelling</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bx bx-palette text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">Pixel Art</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bx bx-camera text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">Photography</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- tools and technologies -->
-                  <div class="space-y-4 mt-6">
-                    <div class="flex gap-2 items-center">
-                      <i
-                        class="bx bxs-window-mac p-2 rounded-full bg-emerald-600/50 text-emerald-400"
-                      ></i>
-                      <h3 class="text-lg font-bold text-gray-200">
-                        Tools & Technologies
-                      </h3>
-                    </div>
-                    <div class="grid grid-cols-3 max-md:grid-cols-2 gap-4">
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i
-                          class="bxl bx-visual-studio text-sky-400 text-xl"
-                        ></i>
-                        <p class="text-sm text-gray-300">VS Code</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-canva text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">Canva</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-blender text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">Blender</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bx bx-palette text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">Libresprite</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-git text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">Git</p>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-800 hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-adobe text-sky-400 text-xl"></i>
-                        <p class="text-sm text-gray-300">Lightroom</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="education" class="about-content">
-                  <ul class="flex flex-col pl-5 max-md:pl-2 gap-2 mt-4">
-                    <li class="">
-                      <div
-                        class="text-sm flex max-md:flex-col md:items-center gap-2"
-                      >
-                        <h4
-                          class="text-xl max-md:text-lg font-bold text-gray-300"
-                        >
-                          SMKN 1 Pemalang
-                        </h4>
-                        <p
-                          class="bg-sky-600/50 text-sky-400 py-0.5 px-2 rounded-full w-fit h-fit text-sm"
-                        >
-                          2024 - 2027
-                        </p>
-                      </div>
-                      <p class="text-gray-200">
-                        Pengembangan Perangkat Lunak dan Gim
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-                <div id="certificate" class="about-content">
-                  <div
-                    class="flex w-full h-full items-center justify-center text-center max-md:text-sm text-gray-600 text-lg"
-                  >
-                    <h3>I don't have a certificate of achievement yet</h3>
-                  </div>
-                </div>
               </div>
             </div>
-          </div>
-        </div>
+            <!-- End Skills 1 -->
 
-        <!-- Projects -->
-        <div id="project" class="main-content">
-          <div
-            class="w-full flex flex-col text-center justify-center items-center space-y-3"
-          >
-            <h2 class="text-4xl font-bold text-gray-100">
-              My <span class="text-sky-600">Project</span>
-            </h2>
-            <p class="text-sm text-gray-300 w-1/2 max-md:w-full">
-              My projects showcase my ideas and skills, created with a focus on
-              growth and meaningful results.
-            </p>
-          </div>
-          <div class="mt-12">
-            <div class="w-full grid grid-cols-3 max-lg:grid-cols-1 gap-6">
-              <!-- Project 1 -->
-              <div class="project-card">
-                <div
-                  class="relative w-full aspect-video group overflow-hidden flex items-center justify-center"
-                >
-                  <div
-                    class="absolute top-0 left-0 w-full aspect-video z-40 bg-gradient-to-b from-transparent to-black/40"
-                  ></div>
-                  <div
-                    class="absolute bottom-0 left-0 w-full h-1/10 py-4 px-2 z-50 flex justify-end items-center"
-                  >
-                    <div
-                      class="text-[10px] rounded-full text-gray-300 py-0.5 px-1 border border-gray-400 w-fit h-fit"
-                    >
-                      <p>Creative Studio Projects</p>
-                    </div>
-                  </div>
-                  <div class="project-card__img items-center justify-center z-10">
-                    <img
-                      class="w-full h-full object-cover"
-                      src="src/images/projects/pixkyro-studio.jpg"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <div class="space-y-1 p-6">
-                  <h3 class="text-xl font-bold text-sky-600">Pixkyro Studio</h3>
-                  <p class="text-sm text-gray-400">
-                    Pixkyro Studio is a creative space focused on developing
-                    games and 3D animations. We combine technology and
-                    storytelling to create meaningful and visually engaging
-                    experiences.
-                  </p>
-                  <div class="flex text-xl mt-4 space-x-2">
-                    <!-- Instagram -->
-                    <a
-                      href="https://instagram.com/pixkyro.studio"
-                      target="_blank"
-                    >
-                      <div
-                        class="w-8 h-8 flex items-center justify-center rounded-full border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-gray-800 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-instagram"></i>
-                      </div>
-                    </a>
-
-                    <!-- youtube -->
-                    <a
-                      href="https://m.youtube.com/@PixkyroStudio"
-                      target="_blank"
-                    >
-                      <div
-                        class="w-8 h-8 flex items-center justify-center rounded-full border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-gray-800 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-youtube"></i>
-                      </div>
-                    </a>
-
-                    <!-- trakteer -->
-                    <a href="https://trakteer.id/pixkyro" target="_blank">
-                      <div
-                        class="w-8 h-8 flex items-center justify-center rounded-full border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-gray-800 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bx bxs-donate-heart"></i>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Project 2 -->
-              <div class="project-card">
-                <div
-                  class="relative w-full aspect-video group overflow-hidden flex items-center justify-center"
-                >
-                  <div
-                    class="absolute top-0 left-0 w-full aspect-video z-40 bg-gradient-to-b from-transparent to-black/40"
-                  ></div>
-                  <div
-                    class="absolute bottom-0 left-0 w-full h-1/10 py-4 px-2 z-50 flex justify-end items-center"
-                  >
-                    <div
-                      class="text-[10px] rounded-full text-gray-300 py-0.5 px-1 border border-gray-400 w-fit h-fit"
-                    >
-                      <p>Web Application</p>
-                    </div>
-                  </div>
-                  <div class="project-card__img z-10">
-                    <img
-                      class="w-full h-full object-cover"
-                      src="src/images/projects/catatoon.gif"
-                      alt=""
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <div class="space-y-1 p-6">
-                  <h3 class="text-xl font-bold text-sky-600">Catatoon</h3>
-                  <p class="text-sm text-gray-400">
-                    Catatoon is a dynamic note-taking website that lets users
-                    easily create, edit, and manage their personal notes with a
-                    clean and responsive design.
-                  </p>
-                  <div class="flex text-xl mt-4 space-x-2">
-                    <!-- Github -->
-                    <a
-                      href="https://github.com/elanghabibi/catatoon"
-                      target="_blank"
-                    >
-                      <div
-                        class="w-8 h-8 flex items-center justify-center rounded-full border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-gray-800 transition-all duration-300 ease-in-out"
-                      >
-                        <i class="bxl bx-github"></i>
-                      </div>
-                    </a>
-
-                    <!-- Demo -->
-                    <a
-                      href="http://catatoon.diskon.com"
-                      target="_blank"
-                    >
-                      <div
-                        class="w-fit h-fit flex items-center justify-center rounded-lg px-4 py-1 text-sm font-bold border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-gray-800 transition-all duration-300 ease-in-out"
-                      >
-                        Demo <i class="bx bx-chevron-right"></i>
-                      </div>
-                    </a>
-
-                  </div>
-                </div>
+            <!-- Skills 2 -->
+            <div class="skills-card__container">
+              <div class="skills-card">
+                <h4 class="skills-card__title">Creative & Visual Skill</h4>
+                <ul class="skills-card__list">
+                  <li class="skill-box">
+                    <i class="bx bx-cube text-xl"></i>
+                    <p class="text-sm">3D Modelling</p>
+                  </li>
+                  <li class="skill-box">
+                    <i class="bxl bx-css3 text-xl"></i>
+                    <p class="text-sm">Pixel Art</p>
+                  </li>
+                  <li class="skill-box">
+                    <i class="bxl bx-javascript text-xl"></i>
+                    <p class="text-sm">Photography</p>
+                  </li>
+                </ul>
               </div>
             </div>
+            <!-- End Skills 2 -->
+
+            <!-- Skills 3 -->
+            <div class="skills-card__container">
+              <div class="skills-card">
+                <h4 class="skills-card__title">Soft Skill</h4>
+                <ul class="skills-card__list">
+                  <li class="skill-box">
+                    <i class="bx bx-extension text-xl"></i>
+                    <p class="text-sm">Problem Solving</p>
+                  </li>
+                  <li class="skill-box">
+                    <i class="bx bx-brain text-xl"></i>
+                    <p class="text-sm">Critical Thinking</p>
+                  </li>
+                  <li class="skill-box">
+                    <i class="bx bx-bug text-xl"></i>
+                    <p class="text-sm">Troubleshooting</p>
+                  </li>
+                  <li class="skill-box">
+                    <i class="bx bx-bolt text-xl"></i>
+                    <p class="text-sm">Fast Learning</p>
+                  </li>
+                  <li class="skill-box">
+                    <i class="bx bx-ear text-xl"></i>
+                    <p class="text-sm">Active Listening</p>
+                  </li>
+                  <li class="skill-box">
+                    <i class="bx bx-check-shield text-xl"></i>
+                    <p class="text-sm">Responsibility</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Skills 3 -->
           </div>
         </div>
+      </section>
+      <!-- End Skills -->
 
-        <!-- Experience -->
-        <div id="experience" class="main-content">
-          <div
-            class="w-full flex flex-col space-y-3 items-center justify-center text-center"
-          >
-            <h2 class="text-4xl font-bold text-gray-100">
-              My <span class="text-sky-600">Experience</span>
-            </h2>
-            <p class="text-sm text-gray-300">
-              My experience reflects my journey of learning and creating in
-              technology and design
-            </p>
-          </div>
-          <div
-            class="mt-8 text-sm text-gray-700 flex w-full justify-center h-100 items-center"
-          >
-            <h3>I don't have any experience yet</h3>
-          </div>
-        </div>
-
-        <!-- Contact -->
-        <div id="contact" class="main-content">
-          <div
-            class="flex flex-col items-center w-full justify-center space-y-3"
-          >
-            <h2 class="text-4xl font-bold text-gray-100">
-              Let's <span class="text-sky-600">Connect</span>
-            </h2>
-            <p class="text-sm text-gray-300 text-center">
-              Let’s connect and collaborate, feel free to reach out anytime!
-            </p>
-          </div>
-          <div class="mt-8 grid grid-cols-2 max-lg:grid-cols-1 gap-10">
-            <div
-              class="w-full h-100 rounded-xl bg-gray-900 border border-gray-800 p-8 space-y-8"
+      <!-- Tools -->
+      <section id="tools" class="w-full h-fit p-8 max-lg:p-4 flex items-center">
+        <div class="w-full h-fit flex flex-col gap-4">
+          <h3 class="text-3xl font-bold">
+            <span class="text-gray-950 dark:text-gray-50"> Tools </span>
+            <span
+              class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
+              >Behind My Projects</span
             >
-              <div class="w-fit px-3 border-l-4 border-sky-600">
-                <h3 class="text-xl font-bold text-gray-200">
-                  Contact Information
-                </h3>
+          </h3>
+          <div class="w-full h-fit p-4">
+            <ul class="tools-list">
+              <li>Visual Studio Code</li>
+              <li>Canva</li>
+              <li>Blender</li>
+              <li>Libresprite</li>
+              <li>Sublime</li>
+              <li>Boxicons</li>
+              <li>Adobe Lightroom</li>
+              <li>Notion</li>
+              <li>Google Keep</li>
+              <li>Netlify</li>
+              <li>Whimsical</li>
+              <li>Behance</li>
+              <li>Dribble</li>
+              <li>Pinterest</li>
+              <li>Laravel</li>
+              <li>TailwindCSS</li>
+              <li>MySQL</li>
+              <li>DBeaver</li>
+              <li>Laragon</li>
+              <li>XAMPP</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- End Tools -->
+
+      <!-- Experience -->
+      <section
+        id="experience"
+        class="w-full h-fit p-8 max-lg:p-4 flex items-center"
+      >
+        <div class="w-full h-fit flex flex-col gap-4">
+          <h3 class="text-3xl font-bold">
+            <span class="text-gray-950 dark:text-gray-50"> Explore </span>
+            <span
+              class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
+              >My Journey</span
+            >
+          </h3>
+          <div class="w-full h-50 p-4">
+            <ul class="flex w-full h-full items-center justify-center">
+              <li class="text-gray-600 dark:text-gray-400">
+                I don't have experience
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- End Experience -->
+
+      <!-- Portfolio -->
+      <section
+        id="portfolio"
+        class="w-full h-fit p-8 max-lg:p-4 flex items-center"
+      >
+        <div class="w-full h-fit flex flex-col gap-8">
+          <h3 class="text-3xl font-bold">
+            <span class="text-gray-950 dark:text-gray-50"> What </span>
+            <span
+              class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
+              >I’ve Built</span
+            >
+          </h3>
+          <div
+            class="grid grid-cols-4 w-full h-fit max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-lg:gap-2 max-lg:p-4"
+          >
+            <!-- Project 1 -->
+            <div class="portfolio-card">
+              <div class="portfolio-card__header">
+                <div class="portfolio-card__header-img image-hover">
+                  <img src="./src/images/projects/pixkyro-logo.png" alt="" />
+                </div>
+                <div class="w-full">
+                  <h4 class="portfolio-card__title">PIXKYRO STUDIO</h4>
+                  <p class="portfolio-card__desc">
+                    Pixkyro Studio is a creative space focused on 3D animations.
+                  </p>
+                  <div class="portfolio-card__category">
+                    <p class="portfolio-card__category-list">Studio</p>
+                    <p class="portfolio-card__category-list">Animation</p>
+                  </div>
+                </div>
               </div>
-              <div class="space-y-8">
+              <div class="portfolio-card__footer">
+                <a class="portfolio-card__footer-social" href="https://instagram.com/pixkyro.studio" target="_blank"
+                  ><i class="bxl bx-instagram text-xl"></i
+                ></a>
+                <a class="portfolio-card__footer-social" href="https://m.youtube.com/@PixkyroStudio" target="_blank"
+                  ><i class="bxl bx-youtube text-xl"></i
+                ></a>
+                <a class="portfolio-card__footer-social" href="https://x.com/PixkyroStudio" target="_blank"
+                  ><i class="bxl bx-twitter-x text-xl"></i
+                ></a>
+                <a class="portfolio-card__footer-social" href="https://trakteer.id/pixkyro" target="_blank"
+                  ><i class="bx bx-donate-heart text-xl"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Project 1 -->
+
+            <!-- Project 2 -->
+            <div class="portfolio-card">
+              <div class="portfolio-card__header">
+                <div class="portfolio-card__header-img image-hover">
+                  <img src="./src/images/projects/catatoon.gif" alt="" />
+                </div>
+                <div class="w-full">
+                  <h4 class="portfolio-card__title">CATATOON</h4>
+                  <p class="portfolio-card__desc">
+                    Catatoon is a simple website for creating a personal notes.
+                  </p>
+                  <div class="portfolio-card__category">
+                    <p class="portfolio-card__category-list">Web App</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-card__footer">
+                <a class="portfolio-card__footer-social" href="https://github.com/elanghabibi/catatoon"
+                  ><i class="bxl bx-github text-xl"></i
+                ></a>
+                <a class="portfolio-card__footer-button" href="http://catatoon.diskon.com/"
+                  >Demo <i class="bx bx-arrow-up-right-stroke"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Project 2 -->
+          </div>
+        </div>
+      </section>
+      <!-- End Portfolio -->
+
+      <section
+        id="contact"
+        class="w-full h-screen max-lg:h-fit p-8 max-md:p-4 flex items-center"
+      >
+        <div class="w-full h-full flex gap-16 max-md:gap-8 max-lg:flex-col">
+          <div class="flex w-1/2 h-fit max-md:w-full">
+            <h3 class="text-9xl max-md:text-3xl font-bold max-md:text-center">
+              <span class="text-gray-950 dark:text-gray-50"> Let's </span>
+              <span
+                class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
+                >Connect</span
+              >
+            </h3>
+          </div>
+          <div class="w-full h-fit max-md:p-4">
+            <div
+              class="w-full h-fit border-2 border-gray-950 dark:border-gray-900 p-8 space-y-8 flex space-x-8 max-md:flex-col"
+            >
+              <div class="space-y-8 w-6/10 max-md:w-full">
                 <!-- Location -->
                 <div class="flex items-center space-x-4">
                   <i
-                    class="bx bxs-location p-3 rounded-full bg-sky-600/50 text-sky-400 text-lg"
+                    class="bx bxs-location p-3 rounded-full bg-gray-950 text-gray-50 dark:bg-gray-50 dark:text-gray-950 text-lg"
                   ></i>
                   <div>
-                    <h4 class="text-md text-gray-200 font-bold">Location</h4>
-                    <p class="text-md text-gray-300">Pemalang, Indonesia</p>
+                    <h4
+                      class="text-md text-gray-950 dark:text-gray-50 font-bold"
+                    >
+                      Location
+                    </h4>
+                    <p class="text-md text-gray-600 dark:text-gray-400">
+                      Pemalang, Indonesia
+                    </p>
                   </div>
                 </div>
 
                 <!-- Email -->
                 <div class="flex items-center space-x-4">
                   <i
-                    class="bx bxs-envelope p-3 rounded-full bg-sky-600/50 text-sky-400 text-lg"
+                    class="bx bxs-envelope p-3 rounded-full bg-gray-950 text-gray-50 dark:bg-gray-50 dark:text-gray-950 text-lg"
                   ></i>
                   <div>
-                    <h4 class="text-md text-gray-200 font-bold">Email</h4>
-                    <p class="text-md text-gray-300">
+                    <h4
+                      class="text-md text-gray-950 font-bold dark:text-gray-50"
+                    >
+                      Email
+                    </h4>
+                    <p class="text-md text-gray-600 dark:text-gray-400">
                       <a
                         href="mailto:elanghabibi17@gmail.com"
                         target="_blank"
@@ -622,11 +537,15 @@
                 <!-- Phone -->
                 <div class="flex items-center space-x-4">
                   <i
-                    class="bx bxs-phone p-3 rounded-full bg-sky-600/50 text-sky-400 text-lg"
+                    class="bx bxs-phone p-3 rounded-full bg-gray-950 text-gray-50 dark:bg-gray-50 dark:text-gray-950 text-lg"
                   ></i>
                   <div>
-                    <h4 class="text-md text-gray-200 font-bold">Phone</h4>
-                    <p class="text-md text-gray-300">
+                    <h4
+                      class="text-md text-gray-950 font-bold dark:text-gray-50"
+                    >
+                      Phone
+                    </h4>
+                    <p class="text-md text-gray-600 dark:text-gray-400">
                       <a
                         href="https://wa.me/6287739227859?text=Hi%20Elang!%2C%20I%20just%20visited%20your%20portfolio%20and%20Iam%20interested%20in%20learning%20more%20about%20your%20work!"
                         target="_blank"
@@ -638,91 +557,50 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Social Media -->
-            <div
-              class="w-full h-100 rounded-xl bg-gray-900 border border-gray-800 p-8 space-y-8"
-            >
-              <div class="w-fit px-3 border-l-4 border-sky-600">
-                <h3 class="text-xl font-bold text-gray-200">Social Profiles</h3>
-              </div>
-              <div class="space-y-4 flex flex-col">
-                <!-- Github -->
-                <a href="https://github.com/elanghabibi" target="_blank">
-                  <div
-                    class="flex items-center space-x-4 p-4 rounded-lg border border-gray-700 justify-between transition-all duration-300 ease-in-out hover:-translate-y-1"
-                  >
-                    <div class="flex items-center space-x-4">
-                      <i
-                        class="bxl bx-github p-3 rounded-full bg-neutral-600/50 text-neutral-400 text-lg"
-                      ></i>
-                      <div>
-                        <h4 class="text-md text-gray-200 font-bold">Github</h4>
-                      </div>
-                    </div>
-                    <i class="bx bx-chevron-right text-xl"></i>
-                  </div>
-                </a>
-
-                <!-- Linkedin -->
+              <div class="w-4/10 grid grid-cols-2 gap-2 max-md:w-full">
+                <a
+                  href="https://www.instagram.com/elanghabibi"
+                  target="_blank"
+                  class="w-full aspect-square flex items-center justify-center bg-gray-950 text-gray-50 dark:bg-gray-50 dark:text-gray-950"
+                  ><i class="bxl bx-instagram text-8xl"></i
+                ></a>
+                <a
+                  href="https://x.com/SkyLangg7"
+                  target="_blank"
+                  class="w-full aspect-square flex items-center justify-center text-gray-950 dark:text-gray-50 border-2 border-gray-950 dark:border-gray-900 hover:bg-pink-500 hover:text-green-200"
+                  ><i class="bxl bx-twitter-x text-8xl"></i
+                ></a>
                 <a
                   href="https://www.linkedin.com/in/elangalamsyahhabibi"
                   target="_blank"
-                >
-                  <div
-                    class="flex items-center space-x-4 p-4 rounded-lg border border-gray-700 justify-between transition-all duration-300 ease-in-out hover:-translate-y-1"
-                  >
-                    <div class="flex items-center space-x-4">
-                      <i
-                        class="bxl bx-linkedin p-3 rounded-full bg-sky-600/50 text-sky-400 text-lg"
-                      ></i>
-                      <div>
-                        <h4 class="text-md text-gray-200 font-bold">
-                          Linkedin
-                        </h4>
-                      </div>
-                    </div>
-                    <i class="bx bx-chevron-right text-xl"></i>
-                  </div>
-                </a>
-
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/elanghabibi" target="_blank">
-                  <div
-                    class="flex items-center space-x-4 p-4 rounded-lg border border-gray-700 justify-between transition-all duration-300 ease-in-out hover:-translate-y-1"
-                  >
-                    <div class="flex items-center space-x-4">
-                      <i
-                        class="bxl bx-instagram p-3 rounded-full bg-purple-600/50 text-purple-400 text-lg"
-                      ></i>
-                      <div>
-                        <h4 class="text-md text-gray-200 font-bold">
-                          Instagram
-                        </h4>
-                      </div>
-                    </div>
-                    <i class="bx bx-chevron-right text-xl"></i>
-                  </div>
-                </a>
+                  class="w-full aspect-square flex items-center justify-center text-gray-950 dark:text-gray-50 border-2 border-gray-950 dark:border-gray-900 hover:bg-pink-500 hover:text-green-200"
+                  ><i class="bxl bx-linkedin text-8xl"></i
+                ></a>
+                <a
+                  href="https://github.com/elanghabibi"
+                  target="_blank"
+                  class="w-full aspect-square flex items-center justify-center bg-gray-950 text-gray-50 dark:bg-gray-50 dark:text-gray-950"
+                  ><i class="bxl bx-github text-8xl"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <footer
-      class="w-full h-fit py-4 text-gray-500 text-sm items-center justify-center flex border-t border-gray-900 mt-16"
-    >
-      <h3>
-        © 2025
-        <a href="https://www.instagram.com/elanghabibi" class="hover:underline"
-          >Elang A. Habibi.</a
-        >
-        All rights reserved.
-      </h3>
-    </footer>
+      <a id="goUp" href="#">
+        <i class="bx bx-chevron-up"></i>
+      </a>
+
+      <footer class="border-t border-gray-100 dark:border-gray-900 flex justify-center w-full">
+        <div class="py-2 text-gray-600 dark:border-gray-800 text-sm">
+          <p>
+            ©<span id="currentYearInf"></span> Elang A. Habibi. All rights
+            reserved.
+          </p>
+        </div>
+      </footer>
+    </main>
   </body>
-  <script src="src/js/script.js"></script>
+  <script src="./src/js/script.js"></script>
 </html>
