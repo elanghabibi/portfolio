@@ -33,8 +33,8 @@ function updateKetDate() {
     ketWaktu.textContent = "Evening";
   }
 
-  const currentYearInf = document.getElementById("currentYearInf");
-  currentYearInf.textContent = year;
+  // const currentYearInf = document.getElementById("currentYearInf");
+  // currentYearInf.textContent = year;
 }
 
 function goUp() {
@@ -90,3 +90,13 @@ toggle.addEventListener("click", function () {
 });
 
 toggleCircle.appendChild(toggleIcon);
+
+const achievementCard = document.querySelectorAll(".achievement-card")
+const achievementCountText = document.getElementById("achievementCount")
+
+achievementCountText.textContent = achievementCard.length
+
+const portfolioCard = document.querySelectorAll(".portfolio-card")
+const projectCountText = document.getElementById("projectCount")
+
+projectCountText.textContent = portfolioCard.length

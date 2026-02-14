@@ -54,6 +54,7 @@
               <li><a href="#skills" class="nav-link">Skills</a></li>
               <li><a href="#tools" class="nav-link">Tools</a></li>
               <li><a href="#experience" class="nav-link">Experience</a></li>
+              <li><a href="#achievement" class="nav-link">Achievement</a></li>
               <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
               <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -73,12 +74,12 @@
               id="toggleCircle"
             ></span>
           </button>
-          <div
+          <button
             class="hidden max-lg:flex text-xl cursor-pointer"
             onclick="toggleMenu()"
           >
             <i class="bx bx-menu"></i>
-          </div>
+          </button>
         </div>
       </div>
     </header>
@@ -90,6 +91,7 @@
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#tools" class="nav-link">Tools</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#achievement" class="nav-link">Achievement</a></li>
         <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
@@ -111,26 +113,26 @@
               >
                 0
               </h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">Years Old</p>
+              <p class="text-gray-600 dark:text-gray-400 text-sm max-md:text-[12px]">Years Old</p>
             </div>
             <div>
               <h3
                 class="flex items-start relative text-4xl dark:text-gray-400 text-gray-600"
               >
-                404
+                <span id="achievementCount">0</span>
               </h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">
-                Brain Not Found
+              <p class="text-gray-600 dark:text-gray-400 text-sm max-md:text-[12px]">
+                Achievement
               </p>
             </div>
             <div>
               <h3
                 class="flex items-start relative text-4xl dark:text-gray-400 text-gray-600"
               >
-                200
+                <span id="projectCount">0</span>
               </h3>
-              <p class="text-gray-600 dark:text-gray-400 text-sm">
-                &quot;Finally works!&quot; momen
+              <p class="text-gray-600 dark:text-gray-400 text-sm max-md:text-[12px]">
+                Project Created
               </p>
             </div>
           </div>
@@ -148,7 +150,7 @@
             <div
               class="relative before:content-[''] before:w-6 max-md:before:w-3 before:h-0.5 before:bg-gray-600 dark:before:bg-gray-400 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 w-full"
             >
-              <p class="ml-8 max-md:ml-4 text-sm text-gray-600 dark:text-gray-400">
+              <p class="ml-8 max-md:ml-4 text-sm max-md:text-[12px] text-gray-600 dark:text-gray-400">
                 It's Elang A. Habibi a Creative Tech Enthusiast
               </p>
             </div>
@@ -175,7 +177,7 @@
             </div>
           </div>
           <div
-            class="w-full text-right text-sm text-gray-600 dark:text-gray-400 max-lg:text-left"
+            class="w-full text-right text-sm max-md:text-[12px] text-gray-600 dark:text-gray-400 max-lg:text-left"
           >
             <p>
               <i
@@ -194,7 +196,7 @@
         class="w-full h-fit p-8 max-lg:p-4 flex items-center"
       >
         <div
-          class="w-fit h-fit flex p-8 max-lg:p-4 border-2 border-gray-100 dark:border-gray-900 gap-8 max-lg:flex-col max-lg:w-full"
+          class="w-fit h-fit flex p-8 max-lg:p-4 border-2 border-gray-200 dark:border-gray-900 gap-8 max-lg:flex-col max-lg:w-full"
         >
           <div
             class="w-35/100 h-fit aspect-[4/3] overflow-hidden relative max-lg:w-full image-hover"
@@ -210,7 +212,7 @@
           </div>
 
           <div class="flex flex-col gap-4 max-lg:gap-2 w-5/10 max-lg:w-full">
-            <h3 class="text-3xl font-bold">
+            <h3 class="text-3xl max-md:text-2xl font-bold">
               <span class="text-gray-950 dark:text-gray-50"> About </span>
               <span
                 class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
@@ -218,13 +220,10 @@
               >
             </h3>
             <p
-              class="w-full text-md text-gray-600 dark:text-gray-400 leading-relaxed"
+              class="w-full text-sm max-md:text-[12px] text-gray-600 dark:text-gray-400 leading-relaxed"
             >
               I'm a Creative Tech Enthusiast with a passion for web development,
-              design, and photography. I enjoy combining technical skills with
-              creativity to build engaging digital experiences. Currently, I’m
-              exploring more in programming and visual art to keep growing and
-              improving.
+              3d modelling, and photography.
             </p>
           </div>
         </div>
@@ -237,7 +236,7 @@
         class="w-full h-fit p-8 flex items-center max-lg:p-4"
       >
         <div class="flex flex-col gap-4 w-full">
-          <h3 class="text-3xl font-bold">
+          <h3 class="text-3xl max-md:text-2xl font-bold">
             <span class="text-gray-950 dark:text-gray-50">What</span>
             <span
               class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
@@ -344,7 +343,7 @@
       <!-- Tools -->
       <section id="tools" class="w-full h-fit p-8 max-lg:p-4 flex items-center">
         <div class="w-full h-fit flex flex-col gap-4">
-          <h3 class="text-3xl font-bold">
+          <h3 class="text-3xl max-md:text-2xl font-bold">
             <span class="text-gray-950 dark:text-gray-50"> Tools </span>
             <span
               class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
@@ -360,9 +359,9 @@
               <li>Sublime</li>
               <li>Boxicons</li>
               <li>Adobe Lightroom</li>
-              <li>Notion</li>
               <li>Google Keep</li>
               <li>Netlify</li>
+              <li>Github</li>
               <li>Whimsical</li>
               <li>Behance</li>
               <li>Dribble</li>
@@ -385,7 +384,7 @@
         class="w-full h-fit p-8 max-lg:p-4 flex items-center"
       >
         <div class="w-full h-fit flex flex-col gap-4">
-          <h3 class="text-3xl font-bold">
+          <h3 class="text-3xl max-md:text-2xl font-bold">
             <span class="text-gray-950 dark:text-gray-50"> Explore </span>
             <span
               class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
@@ -403,13 +402,44 @@
       </section>
       <!-- End Experience -->
 
+      <!-- Achievement -->
+      <section
+        id="achievement"
+        class="w-full h-fit p-8 max-lg:p-4 flex items-center"
+      >
+        <div class="w-full h-fit flex flex-col gap-4">
+          <h3 class="text-3xl max-md:text-2xl font-bold">
+            <span class="text-gray-950 dark:text-gray-50"> Selected </span>
+            <span
+              class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
+              >Achievements</span
+            >
+          </h3>
+          <div class="w-full grid grid-cols-2 max-lg:grid-cols-1 gap-4 max-lg:gap-2 max-lg:p-4">
+            <div class="achievement-card w-full flex flex-col gap-1 h-fit p-4 border-2 border-gray-200 dark:border-gray-900">
+              <div class="flex w-full items-center justify-between max-md:flex-col-reverse max-md:gap-2 max-md:items-start">
+                <h4 class="text-xl max-md:text-[16px] max-md:text-md font-bold dark:text-gray-50 text-gray-950">2nd Place - Web Technologies</h4>
+                <p class="text-sm max-md:text-[12px] border border-gray-200 dark:border-gray-950 rounded-full dark:text-gray-400 text-gray-600 px-2 py-0.5">2026</p>
+              </div>
+
+              <p class="text-sm max-md:text-[12px] text-gray-600 dark:text-gray-400">Student Skills Competition Pemalang Regency Level</p>
+
+              <div class="mt-4">
+                <!-- <a href="" target="_blank" class="hover:bg-pink-500 hover:text-green-200 gap-1 w-fit h-fit cursor-pointer text-sm flex items-center border px-4 py-2 border-gray-200 dark:border-gray-900 text-gray-600 dark:text-gray-400">View Certificate <i class="bx bx-chevron-right text-lg"></i></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Achievement -->
+
       <!-- Portfolio -->
       <section
         id="portfolio"
         class="w-full h-fit p-8 max-lg:p-4 flex items-center"
       >
         <div class="w-full h-fit flex flex-col gap-8">
-          <h3 class="text-3xl font-bold">
+          <h3 class="text-3xl max-md:text-2xl font-bold">
             <span class="text-gray-950 dark:text-gray-50"> What </span>
             <span
               class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
@@ -420,7 +450,7 @@
             class="grid grid-cols-4 w-full h-fit max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3 max-lg:gap-2 max-lg:p-4"
           >
   
-            <!-- Project 2 -->
+            <!-- Project 1 -->
             <div class="portfolio-card">
               <div class="portfolio-card__header">
                 <div class="portfolio-card__header-img image-hover">
@@ -440,24 +470,25 @@
                 <a class="portfolio-card__footer-social" href="https://github.com/elanghabibi/catatoon"
                   ><i class="bxl bx-github text-xl"></i
                 ></a>
-                <a class="portfolio-card__footer-button" href="http://catatoon.diskon.cloud"
+                <!-- <a class="portfolio-card__footer-button" href="http://catatoon.diskon.cloud"
                   >Demo <i class="bx bx-arrow-up-right-stroke"></i
-                ></a>
+                ></a> -->
               </div>
             </div>
-            <!-- End Project 2 -->
+            <!-- End Project 1 -->
           </div>
         </div>
       </section>
       <!-- End Portfolio -->
 
+      <!-- Contact -->
       <section
         id="contact"
         class="w-full h-screen max-lg:h-fit p-8 max-md:p-4 flex items-center"
       >
         <div class="w-full h-full flex gap-16 max-md:gap-8 max-lg:flex-col">
           <div class="flex w-1/2 h-fit max-md:w-full">
-            <h3 class="text-9xl max-md:text-3xl font-bold max-md:text-center">
+            <h3 class="text-9xl max-md:text-2xl font-bold max-md:text-center">
               <span class="text-gray-950 dark:text-gray-50"> Let's </span>
               <span
                 class="text-shadow-outline-1-light dark:text-shadow-outline-1-dark text-gray-50 dark:text-gray-950"
@@ -467,7 +498,7 @@
           </div>
           <div class="w-full h-fit max-md:p-4">
             <div
-              class="w-full h-fit border-2 border-gray-950 dark:border-gray-900 p-8 space-y-8 flex space-x-8 max-md:flex-col"
+              class="w-full h-fit border-2 border-gray-200 dark:border-gray-900 p-8 space-y-8 flex space-x-8 max-md:flex-col"
             >
               <div class="space-y-8 w-6/10 max-md:w-full">
                 <!-- Location -->
@@ -535,7 +566,7 @@
               </div>
               <div class="w-4/10 grid grid-cols-2 gap-2 max-md:w-full">
                 <a
-                  href="https://www.instagram.com/elanghabibi"
+                  href="https://www.instagram.com/eah.jpeg"
                   target="_blank"
                   class="w-full aspect-square flex items-center justify-center bg-gray-950 text-gray-50 dark:bg-gray-50 dark:text-gray-950"
                   ><i class="bxl bx-instagram text-8xl"></i
@@ -571,7 +602,7 @@
       <footer class="border-t border-gray-100 dark:border-gray-900 flex justify-center w-full">
         <div class="py-2 text-gray-600 dark:border-gray-800 text-sm">
           <p>
-            ©<span id="currentYearInf"></span> Elang A. Habibi. All rights
+            ©<span>2025</span> Elang A. Habibi. All rights
             reserved.
           </p>
         </div>
