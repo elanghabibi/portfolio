@@ -26,6 +26,8 @@
     --color-neutral-600: oklch(43.9% 0 0);
     --color-neutral-950: oklch(14.5% 0 0);
     --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
@@ -1041,12 +1043,14 @@
   padding: calc(var(--spacing) * 4);
 }
 .portfolio-card__header-img {
+  display: flex;
   aspect-ratio: 4/3;
   width: 100%;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 .portfolio-card__header-img img {
-  height: 100%;
   width: 100%;
   object-fit: cover;
 }
@@ -1080,8 +1084,8 @@
   border-color: var(--color-gray-200);
   padding-inline: calc(var(--spacing) * 4);
   padding-block: calc(var(--spacing) * 1);
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
   color: var(--color-gray-600);
   &:where(.dark, .dark *) {
     border-color: var(--color-gray-900);
