@@ -9,7 +9,7 @@ This project is my space to showcase who I am, my skills, and the projects I’v
 - Built with HTML, CSS (Tailwind), and JavaScript  
 
 ## 🚀 Live Preview
-👉 [View My Portfolio](https://elanghabibi.netlify.app)  
+👉 [View My Portfolio](https://elanghabibi.web.id)
 
 ## 🛠️ Tech Stack
 - HTML5  
